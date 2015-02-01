@@ -2,23 +2,13 @@
   <ion-content class="padding">
 
   <ion-list>
-    <ion-item ng-repeat="vape in flavors">
-      <h2>{{vape.name}}</h2>
+    <ion-item ng-repeat="vape in flavors" ng-click="showVape(vape)">
+    <img src="{{vape.image}}" style="max-width: 100px; float: left;">
+    <h2>{{vape.name}}</h2>
+
     </ion-item>
   </ion-list>
-
-    <form ng-submit="addVape()">
-      <div class="list">
-        <label class="item item-input">
-          <span class="input-label">Vape Name</span>
-          <input type="text" ng-model="vapedata.name">
-        </label>
-        <label class="item">
-          <button class="button button-block button-positive" type="submit">Save</button>
-        </label>
-      </div>
-    </form>
-
-
+	<button class="button button-block button-positive" ng-click="createVape()">Add Vape</button>
+  
   </ion-content>
 </ion-view>

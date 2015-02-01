@@ -1,0 +1,72 @@
+Node version: v0.10.26
+
+Cordova version: 4.2.0
+
+Config.xml file: 
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.vaperlib147572" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>vaperlib</name>
+  <description>
+        An Ionic Framework and Cordova project.
+    </description>
+  <author email="hi@ionicframework" href="http://ionicframework.com/">
+      Ionic Framework Team
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>
+
+Plugins: 
+
+com.ionic.keyboard,org.apache.cordova.camera,org.apache.cordova.console,org.apache.cordova.device
+
+Android platform:
+
+Available Android targets:
+----------
+id: 1 or "android-19"
+     Name: Android 4.4.2
+     Type: Platform
+     API level: 19
+     Revision: 4
+     Skins: HVGA, QVGA, WQVGA400, WQVGA432, WSVGA, WVGA800 (default), WVGA854, WXGA720, WXGA800, WXGA800-7in
+ Tag/ABIs : no ABIs.
+----------
+id: 2 or "android-21"
+     Name: Android 5.0.1
+     Type: Platform
+     API level: 21
+     Revision: 2
+     Skins: HVGA, QVGA, WQVGA400, WQVGA432, WSVGA, WVGA800 (default), WVGA854, WXGA720, WXGA800, WXGA800-7in
+ Tag/ABIs : no ABIs.
+----------
+id: 3 or "Google Inc.:Google APIs:21"
+     Name: Google APIs
+     Type: Add-On
+     Vendor: Google Inc.
+     Revision: 1
+     Description: Android + Google APIs
+     Based on Android 5.0.1 (API level 21)
+     Libraries:
+      * com.google.android.media.effects (effects.jar)
+          Collection of video effects
+      * com.android.future.usb.accessory (usb.jar)
+          API for USB Accessories
+      * com.google.android.maps (maps.jar)
+          API for Google Maps
+     Skins: HVGA, QVGA, WQVGA400, WQVGA432, WSVGA, WVGA800 (default), WVGA854, WXGA720, WXGA800, WXGA800-7in
+ Tag/ABIs : google_apis/x86
+
+iOS platform:
+
+Xcode 6.1.1
+Build version 6A2008a
+

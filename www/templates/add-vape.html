@@ -1,0 +1,65 @@
+<ion-modal-view>
+  <!-- titlebar -->
+  <ion-header-bar>
+    <h1 class="title">Add vape</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal($event)">Close</button>
+    </div>
+  </ion-header-bar>
+  
+  <!-- content -->
+  <ion-content>
+    <form ng-submit="addVape()">
+
+
+
+      <div class="list">
+        <label class="item">
+          <input type="text" ng-model="vapedata.name" placeholder="Vape Name">
+        </label>
+        <div class="item " ng-show="vapedata.image">
+          <img ng-src="{{vapedata.image}}" style="max-width: 100%">
+        </div>
+        <label class="item " ng-show="!vapedata.image">
+            <button class="button button-block button-positive" ng-click="getPhoto($event)">Take photo</button>
+        </label>
+
+        <div class="item range range-positive">
+          <label class="flex-1">Smoothness</label>
+          <input class="flex-2" type="range" name="volume" min="0" max="100" value="33" ng-model="vapedata.smoothness">
+          
+        </div>
+        <div class="item range range-positive">
+            <label class="flex-1">Sweetness</label>
+            <input class="flex-2" type="range" name="volume" min="0" max="100" value="33" ng-model="vapedata.sweetness">
+        </div>
+        <div class="item range range-positive">
+            <label class="flex-1">Vapor</label>
+            <input class="flex-2"type="range" name="volume" min="0" max="100" value="33" ng-model="vapedata.vapor">
+        </div>
+        <div class="item range range-positive">
+            <label class="flex-1">Throat hit</label>
+            <input class="flex-2" type="range" name="volume" min="0" max="100" value="33" ng-model="vapedata.throatHit">
+        </div>
+
+        <label class="item " ng-if="isNew" >
+          <button class="button button-block button-balanced"  type="submit">Save</button>
+        </label>
+        <label class="item " ng-if="!isNew" >
+          <button class="button button-block button-positive" ng-click="closeModal($event)">Close</button>
+        </label>
+    
+      </div>
+    </form>
+
+
+
+
+  </ion-content>
+
+ 
+
+</ion-modal-view>
+
+
+
