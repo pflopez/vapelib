@@ -1,0 +1,24 @@
+<ion-view view-title="Vapes">
+  <ion-content class="padding">
+
+  <ion-list>
+    <ion-item ng-repeat="vape in flavors">
+      <h2>{{vape.name}}</h2>
+    </ion-item>
+  </ion-list>
+
+    <form ng-submit="addVape()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Vape Name</span>
+          <input type="text" ng-model="vapedata.name">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Save</button>
+        </label>
+      </div>
+    </form>
+
+
+  </ion-content>
+</ion-view>
