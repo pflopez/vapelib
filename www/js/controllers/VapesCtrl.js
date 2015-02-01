@@ -3,25 +3,15 @@ angular.module('starter.controllers').controller('VapesCtrl',
 function( $scope,   $timeout,    $ionicModal,   VapesService) {
 	'use strict';
 
-var flavors;
+	var flavors;
 
  	function init(){
-
-
- 		//reset!!
- 	
- 		console.log("init again");
-
- 		// Create the login modal that we will use later
-    $ionicModal.fromTemplateUrl('templates/vape-modal.html', {
-      scope: $scope
-    }).then(function(modal) {
-      $scope.modal = modal;
-    });
-
+ 		//preload modal data
+		preloadModal();
 
 		$scope.vapedata = {};
 		flavors = VapesService.getFlavorsFromLocalStorage();
+ 		
  		if(flavors){
  			console.log('tengo flavors');
  		}else {
@@ -30,14 +20,7 @@ var flavors;
  		}
 
  		$scope.flavors = flavors;
- 		 	
  	}
-
-	$scope.createVape = function(){
-		$scope.vapedata = {};
-		$scope.isNew = true;
-		$scope.modal.show();
-	}
 
 	$scope.closeModal = function(e){
 		$scope.modal.hide();
@@ -45,14 +28,31 @@ var flavors;
 	}
 
 	
-
 	$scope.showVape = function(vape){
 		$scope.isNew = false;
 		$scope.vapedata = vape;
 		$scope.modal.show();
 	}
 
+	function preloadModal(){
+		// Create the login modal that we will use later
+    $ionicModal.fromTemplateUrl('templates/vape-modal.html', {
+      scope: $scope
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
 
- 	init();
+	}
+
+	$scope.removeVape = function(event, vape){
+		//stop propagation to row
+		event.stopPropagation();
+		// remove and save flavors
+		flavors = VapesService.removeVape(vape);
+	
+	}
+
+
+ 	init();	
 
 }]);

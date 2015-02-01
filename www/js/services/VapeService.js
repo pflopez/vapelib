@@ -1,6 +1,6 @@
-angular.module('starter.services', [])
-
-.factory('VapesService', function($localstorage) {
+angular.module('starter.services', []).factory('VapesService', 
+        [  '$localstorage', 'lodash' ,
+  function( $localstorage,   lodash ) {
 	var vapes,flavors;
 
 	function getLocalStorage(){
@@ -35,12 +35,19 @@ angular.module('starter.services', [])
 		});
  	}
 
+  function removeVape(vape){
+    if(lodash.indexOf(flavors, vape) >= 0){
+      lodash.pull(flavors,vape);
+    }
+    saveLocalStorage();
+    return flavors;
+  }
+
   return {
   	getFlavorsFromLocalStorage: getFlavorsFromLocalStorage,
   	saveVape: saveVape,
-
+    removeVape: removeVape,
   	getLocalStorage: getLocalStorage,
-  	saveLocalStorage: saveLocalStorage,
    	resetLocalStorage: resetLocalStorage
   };
-});
+}]);

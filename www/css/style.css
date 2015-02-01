@@ -30,3 +30,12 @@
 .image{
 	width: 100%;
 }
+
+.button-top {
+	position: absolute;
+	top:0;
+	right:0;
+}
+.relative-row{
+	position: relative;
+}

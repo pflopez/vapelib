@@ -6,10 +6,10 @@
     	<div class="flex-1">
     		<img src="{{vape.image}}" class="image">
     	</div>
-
-
-    	<div class="flex-1">
+    	<div class="flex-2 relative-row">
+        <button class="button-top button-small button-light button" ng-click="removeVape($event, vape)">Remove</button>
     		<h2>{{vape.name}}</h2>
+
       	<div class="container" ng-if="vape.smoothness">
       		<div>Smoothness</div>
       		<div class="line" ng-style="{ 'width' : vape.smoothness + '0%' }"></div>
