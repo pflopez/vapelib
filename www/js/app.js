@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 'ionic.utils'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 'ionic.utils' , 'ngImgCrop'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -47,6 +47,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services' , 
       }
     }
   })
+  .state('tab.addVape', {
+    url: '/add',
+    views: {
+      'add-vape': {
+        templateUrl: 'templates/add-vape-tab.html',
+        controller: 'VapeAddCtrl'
+      }
+    }
+  })
+
+  
   .state('tab.account', {
     url: '/account',
     views: {

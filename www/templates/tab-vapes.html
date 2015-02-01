@@ -1,14 +1,39 @@
 <ion-view view-title="Vapes">
   <ion-content class="padding">
 
-  <ion-list>
-    <ion-item ng-repeat="vape in flavors" ng-click="showVape(vape)">
-    <img src="{{vape.image}}" style="max-width: 100px; float: left;">
-    <h2>{{vape.name}}</h2>
+  <section>
+    <div ng-repeat="vape in flavors" ng-click="showVape(vape)" class="flex-container">
+    	<div class="flex-1">
+    		<img src="{{vape.image}}" class="image">
+    	</div>
 
-    </ion-item>
-  </ion-list>
-	<button class="button button-block button-positive" ng-click="createVape()">Add Vape</button>
+
+    	<div class="flex-1">
+    		<h2>{{vape.name}}</h2>
+      	<div class="container" ng-if="vape.smoothness">
+      		<div>Smoothness</div>
+      		<div class="line" ng-style="{ 'width' : vape.smoothness + '0%' }"></div>
+      	</div>
+
+      	<div class="container" ng-if="vape.sweetness">
+      		<div>Sweetness</div>
+      		<div class="line" ng-style="{ 'width' : vape.sweetness + '0%' }"></div>
+      	</div>
+
+      	<div class="container" ng-if="vape.vapor">
+      		<div>Vapor</div>
+      		<div class="line" ng-style="{ 'width' : vape.vapor + '0%' }"></div>
+      	</div>
+
+      	<div class="container" ng-if="vape.throatHit">
+      		<div>Throat hit</div>
+      		<div class="line" ng-style="{ 'width' : vape.throatHit + '0%' }"></div>
+      	</div>
+
+			</div>
+    </div>
+  </section>
+<!-- 	<button class="button button-block button-positive" ng-click="createVape()">Add Vape</button> -->
   
   </ion-content>
 </ion-view>

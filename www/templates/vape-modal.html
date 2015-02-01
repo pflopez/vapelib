@@ -1,0 +1,19 @@
+<ion-modal-view>
+  <!-- titlebar -->
+  <ion-header-bar>
+    <h1 class="title">Add vape</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeModal($event)">Close</button>
+    </div>
+  </ion-header-bar>
+  
+  <!-- content -->
+  <ion-content>
+    <form ng-submit="addVape()">
+      <div class="list" ng-include="'templates/_vape-info.html'"></div>
+    </form>
+  </ion-content>
+</ion-modal-view>
+
+
+
