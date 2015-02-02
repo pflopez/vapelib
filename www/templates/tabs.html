@@ -3,17 +3,17 @@ Create tabs with an icon and label, using the tabs-positive style.
 Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+<ion-tabs class="tabs-background-royal tabs-color-light permanent-marker">
 
 
   <!-- Dashboard Tab -->
-  <ion-tab title="Vapes" icon-off="ion-ios7-pulse" icon-on="ion-ios7-pulse-strong" href="#/tab/vapes">
+  <ion-tab title="Vapes" href="#/tab/vapes">
     <ion-nav-view name="tab-vapes"></ion-nav-view>
   </ion-tab>
 
 
   
-  <ion-tab title="Add Vape" icon-off="ion-ios7-chatboxes-outline" icon-on="ion-ios7-chatboxes" href="#/tab/add">
+  <ion-tab title="Add Vape" href="#/tab/add">
     <ion-nav-view name="add-vape"></ion-nav-view>
   </ion-tab>
 <!-- 
@@ -24,9 +24,9 @@ navigation history that also transitions its views in and out.
  -->
 
   <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-ios7-gear-outline" icon-on="ion-ios7-gear" href="#/tab/account">
+<!--   <ion-tab title="Account" icon-off="ion-ios7-gear-outline" icon-on="ion-ios7-gear" href="#/tab/account">
     <ion-nav-view name="tab-account"></ion-nav-view>
-  </ion-tab>
+  </ion-tab> -->
 
 
 </ion-tabs>

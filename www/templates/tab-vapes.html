@@ -1,7 +1,7 @@
 <ion-view view-title="Vapes">
-  <ion-content class="padding">
+  <ion-content class="padding background-light">
 
-  <section>
+  <section >
     <div ng-repeat="vape in flavors" ng-click="showVape(vape)" class="flex-container">
     	<div class="flex-1">
     		<img src="{{vape.image}}" class="image">
@@ -9,6 +9,7 @@
     	<div class="flex-2 relative-row">
         <button class="button-top button-small button-light button" ng-click="removeVape($event, vape)">Remove</button>
     		<h2>{{vape.name}}</h2>
+        <h3>{{vape.maker}}</h3>
 
       	<div class="container" ng-if="vape.smoothness">
       		<div>Smoothness</div>
