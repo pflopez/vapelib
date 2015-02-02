@@ -5,13 +5,14 @@
     <div ng-repeat="vape in flavors" ng-click="showVape(vape)" class="vape-item">
       <h2 class="title vape-title stable">{{vape.name}}</h2>
       <h4 class="vape-subtitle title stable">{{vape.maker}}</h4>
+      <button class="button-top remove-button" ng-click="removeVape($event, vape)">X</button>
 
       <div class="flex-container">
         <div class="flex-1">
           <img src="{{vape.image}}" class="vape-image">
         </div>
         <div class="flex-2 relative-row">
-          <button class="button-top button-small button-light button remove-button" ng-click="removeVape($event, vape)">Remove</button>
+        
           
 
           <div class="container" ng-if="vape.smoothness">

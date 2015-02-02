@@ -7061,7 +7061,15 @@ a.button {
   text-transform: uppercase; }
 
 .remove-button {
-  display: none; }
+  background-color: #594F4F;
+  border-radius: 50%;
+  border: none;
+  height: 25px;
+  width: 25px;
+  color: #F5FAEE;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px; }
 
 .permanent-marker .tab-item, button, select, textarea, .title, .range {
   font-family: 'Permanent Marker', cursive; }
@@ -7093,7 +7101,10 @@ input[type="text"] {
   color: rgba(89, 79, 79, 0.8); }
 
 .vape-item {
-  padding-top: 20px; }
+  margin-top: 15px;
+  position: relative; }
+  .vape-item:first-child {
+    margin-top: 0; }
 
 .container {
   color: #547980; }

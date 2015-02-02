@@ -1,4 +1,14 @@
-.range input.flex-2  , .flex-2 {
+@mixin permanent-marker(){
+	font-family: 'Permanent Marker', cursive;
+}
+
+@mixin gloria(){
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+.range input.flex-2, 
+.flex-2 {
 	-webkit-box-flex: 2;
 	-webkit-flex: 2;
 	-moz-box-flex: 2;
@@ -20,7 +30,7 @@
 	background: $positive;
 }
 
-.flex-container{
+.flex-container {
 	display: -webkit-flex;
 	display: flex;
 	align-items: center;
@@ -40,7 +50,7 @@
 	top:0;
 	right:0;
 }
-.relative-row{
+.relative-row {
 	position: relative;
 	margin-left:20px;
 }
@@ -50,17 +60,15 @@
 }
 
 .remove-button{
-	display: none;
-}
-
-
-
-@mixin permanent-marker(){
-	font-family: 'Permanent Marker', cursive;
-}
-
-@mixin gloria(){
-	font-family: 'Gloria Hallelujah', cursive;
+	background-color: $stable;
+	border-radius: 50%;
+	border: none;
+	height: 25px;
+	width: 25px;
+	color: $light;
+	padding: 0;
+	margin: 0;
+	margin-top:10px;
 }
 
 
@@ -72,8 +80,8 @@
 input[type="text"] {
 	background-color: $light;
 	color: $stable;
-	font-size:20px;
-	line-height:20px;
+	font-size: 20px;
+	line-height: 20px;
 }
 
 
@@ -82,7 +90,7 @@ input[type="text"] {
 }
 
 .bar.bar-positive .title {
-	color:$light;
+	color: $light;
 	font-size: 24px;
 }
 
@@ -103,11 +111,16 @@ input[type="text"] {
 }
 
 .vape-item{
-	padding-top:20px;
+	margin-top: 15px;
+	position: relative;
+	
+	&:first-child{
+		margin-top: 0;
+	}
 }
 
 
 .container {
 	color: $positive;
-	
+
 }
