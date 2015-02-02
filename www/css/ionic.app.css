@@ -7033,14 +7033,20 @@ a.button {
 
 .line {
   height: 3px;
-  background: red; }
+  background: #547980; }
 
 .flex-container {
   display: -webkit-flex;
-  display: flex; }
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border-bottom: 1px solid rgba(84, 121, 128, 0.2);
+  padding-bottom: 20px; }
 
-.image {
-  width: 100%; }
+.vape-image {
+  width: 100%;
+  clip-path: circle(40% at center);
+  -webkit-clip-path: circle(40% at center); }
 
 .button-top {
   position: absolute;
@@ -7048,20 +7054,23 @@ a.button {
   right: 0; }
 
 .relative-row {
-  position: relative; }
+  position: relative;
+  margin-left: 20px; }
 
 .container {
   text-transform: uppercase; }
 
-.permanent-marker .tab-item, body, input, button, select, textarea, h2, h3 {
+.remove-button {
+  display: none; }
+
+.permanent-marker .tab-item, button, select, textarea, .title, .range {
   font-family: 'Permanent Marker', cursive; }
 
 input[type="text"] {
   background-color: #F5FAEE;
   color: #594F4F;
   font-size: 20px;
-  line-height: 20px;
-  font-family: 'Permanent Marker', cursive; }
+  line-height: 20px; }
 
 .tab-item {
   font-size: 24px; }
@@ -7072,3 +7081,19 @@ input[type="text"] {
 
 .background-light {
   background-color: #F5FAEE; }
+
+.vape-title {
+  margin: 0;
+  text-align: center; }
+
+.vape-subtitle {
+  margin: 0;
+  line-height: 10px;
+  text-align: center;
+  color: rgba(89, 79, 79, 0.8); }
+
+.vape-item {
+  padding-top: 20px; }
+
+.container {
+  color: #547980; }
